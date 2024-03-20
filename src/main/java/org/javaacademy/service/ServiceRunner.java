@@ -1,4 +1,4 @@
-package org.javaacademy.station;
+package org.javaacademy.service;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

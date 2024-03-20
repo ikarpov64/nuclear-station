@@ -1,5 +1,6 @@
-package org.javaacademy.station;
+package org.javaacademy.service;
 
+import org.javaacademy.station.NuclearStation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

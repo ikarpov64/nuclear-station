@@ -18,6 +18,7 @@ public class NuclearStation {
     private final SecurityDepartment securityDepartment;
     private BigDecimal totalEnergyProduced = new BigDecimal(0);
     private int accidentCountAllTime;
+    private final EconomicDepartment economicDepartment;
 
     private void startYear() {
         System.out.println("Атомная станция начала работу.");
@@ -35,11 +36,14 @@ public class NuclearStation {
         System.out.printf("Атомная станция закончила работу. За год Выработано %s киловатт/часов\n",
                 totalEnergyProduced.toString());
         System.out.printf("Количество инцидентов за год: %s\n", securityDepartment.getAccidentCountPeriod());
+        System.out.printf("Доход за год составил: %s\n",
+                economicDepartment.computeYearIncomes(totalEnergyProduced.longValue()));
         totalEnergyProduced = new BigDecimal(0);
         securityDepartment.reset();
     }
 
     public void start(int year) {
+        System.out.printf("Действие происходит в стране: %s\n", economicDepartment);
         for (int i = 0; i < year; i++) {
             startYear();
         }

@@ -9,9 +9,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class NuclearStationApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext applicationContext = SpringApplication.run(NuclearStationApplication.class, args);
-		NuclearStation bean = applicationContext.getBean(NuclearStation.class);
-		bean.start(3);
+		SpringApplication.run(NuclearStationApplication.class, args);
+//		ConfigurableApplicationContext applicationContext = SpringApplication.run(NuclearStationApplication.class, args);
+//		NuclearStation bean = applicationContext.getBean(NuclearStation.class);
+//		bean.start(3);
 	}
 
 }

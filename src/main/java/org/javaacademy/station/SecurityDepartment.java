@@ -17,10 +17,6 @@ public class SecurityDepartment {
         accidentCountPeriod ++;
     }
 
-//    public int getCountAccidents() {
-//        return accidentCountPeriod;
-//    }
-
     public void reset() {
         nuclearStation.incrementAccident(accidentCountPeriod);
         accidentCountPeriod = 0;

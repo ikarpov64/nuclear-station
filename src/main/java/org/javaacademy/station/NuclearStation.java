@@ -36,14 +36,15 @@ public class NuclearStation {
         System.out.printf("Атомная станция закончила работу. За год Выработано %s киловатт/часов\n",
                 totalEnergyProduced.toString());
         System.out.printf("Количество инцидентов за год: %s\n", securityDepartment.getAccidentCountPeriod());
-        System.out.printf("Доход за год составил: %s\n",
-                economicDepartment.computeYearIncomes(totalEnergyProduced.longValue()));
+        System.out.printf("Доход за год составил: %.2f %s\n",
+                economicDepartment.computeYearIncomes(totalEnergyProduced.longValue()),
+                economicDepartment.getCurrency());
         totalEnergyProduced = new BigDecimal(0);
         securityDepartment.reset();
     }
 
     public void start(int year) {
-        System.out.printf("Действие происходит в стране: %s\n", economicDepartment);
+        System.out.printf("Действие происходит в стране: %s\n", economicDepartment.getName());
         for (int i = 0; i < year; i++) {
             startYear();
         }

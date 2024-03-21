@@ -1,16 +1,16 @@
 country:
   france:
     name: Франция
-    cost: 0.5
-    discount: 0.99
+    costPerUnit: 0.5
+    discountEachBillion: 0.99
     currency: EUR
   morocco:
     name: Марокко
-    cost: 5
+    costPerUnit: 5
     multiplierOver: 5
     increasedCost: 6
     currency: AED
 
 spring:
   profiles:
-    active: morocco
+    active: france

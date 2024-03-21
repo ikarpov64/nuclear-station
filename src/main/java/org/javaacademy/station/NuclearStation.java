@@ -2,10 +2,8 @@ package org.javaacademy.station;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
-
 import java.math.BigDecimal;
 
 @Getter
@@ -14,11 +12,10 @@ import java.math.BigDecimal;
 public class NuclearStation {
     private final ReactorDepartment reactorDepartment;
     @Lazy
-    @Autowired
     private final SecurityDepartment securityDepartment;
+    private final EconomicDepartment economicDepartment;
     private BigDecimal totalEnergyProduced = new BigDecimal(0);
     private int accidentCountAllTime;
-    private final EconomicDepartment economicDepartment;
 
     private void startYear() {
         System.out.println("Атомная станция начала работу.");

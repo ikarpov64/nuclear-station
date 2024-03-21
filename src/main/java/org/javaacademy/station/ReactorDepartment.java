@@ -4,16 +4,13 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.javaacademy.exception.NuclearFuelIsEmptyException;
 import org.javaacademy.exception.ReactorWorkException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Getter
 @Component
 @RequiredArgsConstructor
-//@RequiredArgsConstructor(onConstructor = @__(@Lazy))
 public class ReactorDepartment {
-    @Autowired
     @Lazy
     private final SecurityDepartment securityDepartment;
     private final double energyProduced = 10_000_000;

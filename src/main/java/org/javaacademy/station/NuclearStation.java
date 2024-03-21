@@ -22,7 +22,6 @@ public class NuclearStation {
 
     private void startYear() {
         System.out.println("Атомная станция начала работу.");
-//        long oneYearEnergyProduced = 0;
         for (int i = 0; i < 365; i++) {
             try {
                 totalEnergyProduced = totalEnergyProduced.add(BigDecimal.valueOf(reactorDepartment.run()));

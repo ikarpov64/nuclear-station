@@ -14,7 +14,7 @@ public class SecurityDepartment {
     private int accidentCountPeriod;
 
     public void addAccident() {
-        accidentCountPeriod ++;
+        accidentCountPeriod++;
     }
 
     public void reset() {

@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 @Profile("morocco")
 @ConfigurationProperties(prefix = "country.morocco")
 public class MoroccoEconomicDepartment extends EconomicDepartment {
-    private double increasedCost;
+    private BigDecimal increasedCost;
 
     @Override
     public BigDecimal computeYearIncomes(long countElectricity) {
@@ -21,7 +21,7 @@ public class MoroccoEconomicDepartment extends EconomicDepartment {
 
         BigDecimal sum = BigDecimal.valueOf(base).multiply(BigDecimal.valueOf(getCostPerUnit()));
         long remainingKwH = countElectricity - base;
-        sum = sum.add(BigDecimal.valueOf(remainingKwH).multiply(BigDecimal.valueOf(increasedCost)));
+        sum = sum.add(BigDecimal.valueOf(remainingKwH).multiply(increasedCost));
         return sum;
     }
 }

@@ -13,4 +13,4 @@ country:
 
 spring:
   profiles:
-    active: france
+    active: morocco
